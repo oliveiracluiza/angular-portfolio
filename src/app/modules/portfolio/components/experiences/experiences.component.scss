@@ -1,0 +1,96 @@
+:host {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    h2 {
+        text-align: center;
+        margin: 0 0 25px 0;
+        font-size: 30px;
+    }
+
+    details {
+        overflow: hidden;
+        margin-top: 10px;
+        background: var(--grey);
+        border-radius: 7px;
+    
+        summary, article {
+            padding: 10px 20px;
+            transition: 500ms;
+        }
+
+        summary {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--primary);
+
+            p {
+                font-size: 14px;
+                color: var(--black-010);
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &[open] {
+            summary {
+                &::after {
+                    margin-top: 5px;
+                content:  url(../../../../../assets/icons/chevron-up.svg);
+                }
+                border-radius: 7px 7px 0 0;
+            }
+        }
+        &:not([open]) {
+            summary {
+                &::after {
+                    margin-top: 5px;
+                    content:  url(../../../../../assets/icons/chevron-down.svg)
+                }
+                
+            }
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 50px; 
+}
+
+@media (max-width: 768px) {
+    :host {
+        margin-top: 15px;
+        padding-bottom: 30px;
+
+        h2 {
+            font-size: 24px;
+            margin: 0 0 20px 0;
+        }
+
+        details {
+            margin-top: 8px;
+
+            summary, article {
+                padding: 8px 15px; 
+            }
+
+            summary p {
+                font-size: 12px; 
+            }
+        }
+    }
+
+    .container {
+        margin-bottom: 30px; 
+        padding: 0 10px; 
+    }
+}

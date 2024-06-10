@@ -1,0 +1,40 @@
+/* Light Theme */
+.light-theme {
+    --background-color: #ffffff;
+    --text-color: #7A6174;
+  }
+  
+  /* Dark Theme */
+  .dark-theme {
+    --background-color: #333333;
+    --text-color: #ffffff;
+  }
+
+  .app-knowledge {
+    background-color: var(--background-color);
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+  h1 {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8C7284;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .content {
+    margin-top: 50px;
+    padding: 20px;
+  }
